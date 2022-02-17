@@ -12,7 +12,7 @@ class NetworkHandler {
 
   Future<http.Response> signIn(String url, Map<String, String> body) async {
     var url = "http://185.196.214.63:3000/api/user/login";
-    log.d(body);
+    //log.d(body);
     print(Uri.parse(url));
 
     var response = await http.post(
@@ -44,7 +44,7 @@ class NetworkHandler {
 
   Future<http.Response> getUserByToken(String url, String token) async {
     url = formater(url);
-    log.d(token);
+    // log.d(token);
     var response = await http.get(
       Uri.parse(url),
       headers: {
@@ -60,7 +60,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    // log.d(body);
     var response = await http.post(
       Uri.parse(url),
       headers: {
@@ -79,7 +79,7 @@ class NetworkHandler {
   ) async {
     url = formater(url);
 
-    log.d(token);
+    //log.d(token);
     var response = await http.get(Uri.parse(url), headers: {
       'Access-Control-Allow-Origin': '*',
       'Content-type': 'application/json',
@@ -92,7 +92,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    ////log.d(body);
     var response = await http.post(
       Uri.http("$baseurl", "$url"),
       headers: {
@@ -109,7 +109,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    /// log.d(body);
     var response = await http.post(
       Uri.parse(url),
       headers: {
@@ -124,7 +124,7 @@ class NetworkHandler {
 
   Future<http.Response> getAllSensor(String url, String token) async {
     url = formater(url);
-    log.d(token);
+    //  log.d(token);
     var response = await http.get(
       Uri.parse(url),
       headers: {
@@ -140,7 +140,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    // log.d(body);
     var response = await http.post(
       Uri.parse(url),
       headers: {
@@ -156,7 +156,7 @@ class NetworkHandler {
   Future<http.Response> getTabelBySensor(
       String url, String token, Map<String, String> body) async {
     // url = formater(url);
-    log.d(token);
+    // log.d(token);
     var uri = Uri.http("185.196.214.63:3000", url, body);
     var response = await http.get(
       uri,
@@ -173,7 +173,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    //log.d(body);
     var response = await http.post(
       Uri.parse(url),
       headers: {
@@ -206,7 +206,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    // log.d(body);
     var response = await http.post(
       Uri.parse(url),
       headers: {
@@ -223,7 +223,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    //log.d(body);
     var response = await http.post(
       Uri.parse(url),
       headers: {
@@ -240,7 +240,7 @@ class NetworkHandler {
       String url, String token, Map<String, String> body) async {
     url = formater(url);
 
-    log.d(body);
+    //  log.d(body);
     var response = await http.post(
       Uri.parse(url),
       headers: {
@@ -255,7 +255,7 @@ class NetworkHandler {
 
   Future<http.Response> gatOnline(String url, String token) async {
     url = formater(url);
-    log.d(token);
+    // log.d(token);
     var response = await http.get(
       Uri.parse(url),
       headers: {
@@ -269,7 +269,7 @@ class NetworkHandler {
 
   Future<http.Response> getlastWeekData(String url, String token) async {
     url = formater(url);
-    log.d(token);
+    // log.d(token);
     var response = await http.get(
       Uri.parse(url),
       headers: {
